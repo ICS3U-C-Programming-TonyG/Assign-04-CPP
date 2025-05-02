@@ -4,7 +4,7 @@
 
 // Created on: 2025-03-17
 
-// Casino number guessing ga
+// Casino number guessing game
 
 #include <iostream>
 #include <random>
