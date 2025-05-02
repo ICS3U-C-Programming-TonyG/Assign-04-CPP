@@ -23,7 +23,7 @@ int main() {
     int luck;
     int level;
     int randomNumber;
-    std::string guessInput;  // Use a string to check for
+    std::string guessInput;  // Use a string to check for invalid
     int guess;
 
     // Start of the program
