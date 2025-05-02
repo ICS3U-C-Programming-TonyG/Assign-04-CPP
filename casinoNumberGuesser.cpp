@@ -21,7 +21,6 @@ int main() {
     int cost;
     int reward;
     int luck;
-    int level;
     int randomNumber;
     std::string guessInput;  // Use a string to check for invalid input
     int guess;
@@ -86,7 +85,6 @@ int main() {
                 cost = 10;
                 reward = 50;
                 luck = 10;
-                level = 1;
 
                 // Display game details
                 std::cout << "You have " << chips << " chips." << std::endl;
@@ -131,12 +129,8 @@ int main() {
                     } catch (std::invalid_argument) {
                         std::cout << "Invalid input. Enter a valid number."
                                   << std::endl;
-                        continue;  // Prompt the user again
+                        continue;  // continue in the loop to ask for input again
                     }
-                }
-
-                if (chips < cost) {
-                    break;  // Exit the "Do you want to play" loop
                 }
             } else if (playResponse == "N" || playResponse == "n" ||
                        playResponse == "No" || playResponse == "no" ||
@@ -162,12 +156,6 @@ int main() {
                 std::cout << "Invalid response. Please answer with Y/N."
                           << std::endl;
             }
-        }
-
-        if (chips < cost) {
-            std::cout << "You have no chips left. Exiting the program."
-                      << std::endl;
-            break;  // Exit the outermost loop to end the program
         }
     }
 }
